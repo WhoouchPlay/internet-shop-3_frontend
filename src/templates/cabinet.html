@@ -1,0 +1,21 @@
+{% extends "_base.html" %}
+
+{% block content %}
+
+  <main class="container mt-3">
+    <div class="row mt-5">
+
+      {% for shop_list in user.shop_list %}
+      <div class="col-4">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h2 class="h5 card-title">{{ shop_list.date }}</h2>
+            <a href="" class="btn btn-sm btn-primary">Деталі туру</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+  </main>
+{% endblock content %}
