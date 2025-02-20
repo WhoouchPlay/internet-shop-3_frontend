@@ -48,19 +48,18 @@ def update_product(
 
 
 
-def signup(first_name: str, last_name: str, email: str, password: str, url: str = USERS_URL):
+def signup(name: str, email: str, password: str, url: str = USERS_URL):
     body = dict(
-        first_name=first_name,
-        last_name=last_name,
+        name=name,
         email=email,
         password=password
     )
 
     resp = requests.post(url, json=body)
     if resp.status_code == 201:
-        flash("абабабабабабабагагагагагагагалалалалалмага, ми не переможні!")
+        flash("Ви успішно зареєструвалися.")
     else:
-        flash("помилка реєстрації")
+        flash("Помилка реєстрації.")
 
 
 def login(email: str, password: str, url: str = USERS_URL):
@@ -68,7 +67,7 @@ def login(email: str, password: str, url: str = USERS_URL):
     resp = requests.post(url, json=body)
     if resp.status_code == 200:
         session.update(resp.json())
-        return "йцукенгшщзфівапролджєячсмитьбю."
+        return "Ви успішно увійшли в акаунт."
 
 
 

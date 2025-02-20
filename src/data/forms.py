@@ -4,13 +4,12 @@ import wtforms
 
 
 class SignUp(FlaskForm):
-    first_name = wtforms.StringField("імя")
-    last_name = wtforms.StringField("прізвище")
-    email = wtforms.EmailField("бистро емаіл піші", validators=[wtforms.validators.data_required(), wtforms.validators.Email()])
-    password = wtforms.PasswordField("пароль", validators=[wtforms.validators.length(6)])
-    submit = wtforms.SubmitField("Заееструватися")
+    name = wtforms.StringField("Ім'я")
+    email = wtforms.EmailField("Електронна пошта", validators=[wtforms.validators.data_required(), wtforms.validators.Email()])
+    password = wtforms.PasswordField("Пароль", validators=[wtforms.validators.length(6)])
+    submit = wtforms.SubmitField("Зареєструватися")
 
 class LoginForm(FlaskForm):
-    email = wtforms.EmailField("бистро емаіл піші", validators=[wtforms.validators.data_required(), wtforms.validators.Email()])
-    password = wtforms.PasswordField("пароль", validators=[wtforms.validators.length(6)])
-    submit = wtforms.SubmitField("Заееструватися")
+    email = wtforms.EmailField("Електронна пошта", validators=[wtforms.validators.data_required(), wtforms.validators.Email()])
+    password = wtforms.PasswordField("Пароль", validators=[wtforms.validators.length(6)])
+    submit = wtforms.SubmitField("Увійти в систему")

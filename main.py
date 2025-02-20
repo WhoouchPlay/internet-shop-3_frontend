@@ -31,12 +31,11 @@ def signup():
 
     if form.validate_on_submit():
         data_actitons.signup(
-            first_name = form.first_name.data,
-            last_name = form.last_name.data,
+            name = form.name.data,
             email = form.email.data,
             password = form.password.data
         )
-        return redirect(url_for('cabinet'))
+        # return redirect(url_for('cabinet'))
     return render_template("signup.html", form=form)
 
 
