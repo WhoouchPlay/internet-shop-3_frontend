@@ -1,9 +1,9 @@
-[project]
++[project]
 name = "internet-shop-3-frontend"
 version = "0.1.0"
 description = ""
 authors = [
-    {name = "leoverem12",email = "143009080+leoverem12@users.noreply.github.com"}
+    {name = "whoouchplay",email = ""}
 ]
 readme = "README.md"
 requires-python = ">=3.10"
