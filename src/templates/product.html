@@ -7,7 +7,7 @@
       <h1 class="display-3 mt-4">{{ product.name  }}*</h1>
       <img src="{{ product.img_url }}" class="w-75">
       <p class="my-4 w-75">{{ product.description }}</p>
-      <a href="{{ url_for('reserve', product_id=product.id) }}" class="btn btn-success btn-lg">ОДТАЮ ВАМ ДЄНГІ11!!! ЗА {{ product.price }} ГРІВЄНЬ!! </a>
+      <a href="{{ url_for('buy_product', product_id=product.id) }}" class="btn btn-success btn-lg">Купити товар за {{ product.price }} грн</a>
     </section>
   </main>
 {% endblock content %}

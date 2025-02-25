@@ -35,7 +35,8 @@ def signup():
             email = form.email.data,
             password = form.password.data
         )
-        # return redirect(url_for('cabinet'))
+        return redirect(url_for('cabinet'))
+    
     return render_template("signup.html", form=form)
 
 
@@ -52,7 +53,9 @@ def login():
             return redirect(url_for('cabinet'))
         else:
             flash("Пароль не вірний")
-            return redirect(url_for("login"), form=form)
+            return redirect(url_for("login"))
+    
+    return render_template("login.html", form=form)
 
 
 

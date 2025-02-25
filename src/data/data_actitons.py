@@ -62,7 +62,7 @@ def signup(name: str, email: str, password: str, url: str = USERS_URL):
         flash("Помилка реєстрації.")
 
 
-def login(email: str, password: str, url: str = USERS_URL):
+def login(email: str, password: str, url: str = TOKEN_URL):
     body = dict(email=email, password=password)
     resp = requests.post(url, json=body)
     if resp.status_code == 200:
